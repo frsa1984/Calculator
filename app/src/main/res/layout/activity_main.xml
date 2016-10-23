@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="1dp"
+    android:paddingLeft="1dp"
+    android:paddingRight="1dp"
+    android:paddingTop="1dp"
+    tools:context="com.example.frankie.calculator.MainActivity"
+    android:background="@android:color/background_dark"
+    android:hapticFeedbackEnabled="true">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:id="@+id/textViewDisplay"
+            android:textSize="60sp"
+            android:background="@android:color/darker_gray"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_row="1"
+            android:layout_column="0"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentEnd="true"
+            android:layout_height="87dp" />
+
+        <Button
+            android:text="AC"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonClear"
+            android:layout_below="@+id/textViewDisplay"
+            android:background="@drawable/my_button"
+            android:hapticFeedbackEnabled="false"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="="
+            android:textColor="#ffffff"
+            android:id="@+id/buttonEquals"
+            android:layout_below="@+id/buttonNine"
+            android:layout_toRightOf="@+id/buttonNine"
+            android:layout_toEndOf="@+id/buttonNine"
+            android:background="@drawable/my_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="9"
+            android:id="@+id/buttonNine"
+            android:layout_below="@+id/buttonSix"
+            android:layout_alignLeft="@+id/buttonCurrency"
+            android:layout_alignStart="@+id/buttonCurrency"
+            android:background="@drawable/my_gray_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="8"
+            android:id="@+id/buttonEight"
+            android:layout_below="@+id/buttonFour"
+            android:layout_toRightOf="@+id/buttonFour"
+            android:layout_toEndOf="@+id/buttonFour"
+            android:background="@drawable/my_gray_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="5"
+            android:id="@+id/buttonFive"
+            android:layout_above="@+id/buttonEight"
+            android:layout_toRightOf="@+id/buttonFour"
+            android:layout_toEndOf="@+id/buttonFour"
+            android:background="@drawable/my_gray_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="/"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonDivide"
+            android:layout_below="@+id/textViewDisplay"
+            android:layout_toRightOf="@+id/buttonSix"
+            android:layout_toEndOf="@+id/buttonSix"
+            android:background="@drawable/my_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="%"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonPercent"
+            android:layout_below="@+id/textViewDisplay"
+            android:layout_toLeftOf="@+id/buttonDivide"
+            android:layout_toStartOf="@+id/buttonDivide"
+            android:background="@drawable/my_button"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="3"
+            android:id="@+id/buttonThree"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonDivide"
+            android:layout_toRightOf="@+id/buttonTwo"
+            android:layout_toEndOf="@+id/buttonTwo"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="-"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonSubtract"
+            android:background="@drawable/my_button"
+            android:layout_below="@+id/buttonMultiply"
+            android:layout_toRightOf="@+id/buttonNine"
+            android:layout_toEndOf="@+id/buttonNine"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="6"
+            android:id="@+id/buttonSix"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonThree"
+            android:layout_toRightOf="@+id/buttonFive"
+            android:layout_toEndOf="@+id/buttonFive"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="*"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonMultiply"
+            android:background="@drawable/my_button"
+            android:layout_below="@+id/buttonDivide"
+            android:layout_toRightOf="@+id/buttonPercent"
+            android:layout_toEndOf="@+id/buttonPercent"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="."
+            android:id="@+id/buttonPoint"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonNine"
+            android:layout_toRightOf="@+id/buttonZero"
+            android:layout_toEndOf="@+id/buttonZero"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="7"
+            android:id="@+id/buttonSeven"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonFour"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="+"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonAdd"
+            android:background="@drawable/my_button"
+
+            android:layout_alignBottom="@+id/buttonNine"
+            android:layout_toRightOf="@+id/buttonNine"
+            android:layout_toEndOf="@+id/buttonNine"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="1"
+            android:id="@+id/buttonOne"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonClear"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="4"
+            android:id="@+id/buttonFour"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonOne"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="-/+"
+            android:textColor="#ffffff"
+            android:id="@+id/buttonNegative"
+            android:background="@drawable/my_button"
+            android:layout_below="@+id/textViewDisplay"
+
+
+            android:layout_alignBottom="@+id/buttonClear"
+            android:layout_toRightOf="@+id/buttonClear"
+            android:layout_toEndOf="@+id/buttonClear"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="$"
+            android:id="@+id/buttonCurrency"
+            android:background="@drawable/my_gray_button"
+            android:layout_below="@+id/buttonNine"
+            android:layout_toRightOf="@+id/buttonEight"
+            android:layout_toEndOf="@+id/buttonEight"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="2"
+            android:id="@+id/buttonTwo"
+            android:background="@drawable/my_gray_button"
+
+            android:layout_alignBaseline="@+id/buttonThree"
+            android:layout_alignBottom="@+id/buttonThree"
+            android:layout_toRightOf="@+id/buttonClear"
+            android:layout_toEndOf="@+id/buttonClear"
+            android:layout_width="80dp"
+            android:layout_height="72dp" />
+
+        <Button
+            android:text="0"
+            android:id="@+id/buttonZero"
+            android:background="@drawable/my_gray_button"
+            android:layout_width="80dp"
+            android:layout_below="@+id/buttonSeven"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentStart="true"
+            android:layout_height="72dp" />
+
+    </RelativeLayout>
+
+
+</RelativeLayout>
