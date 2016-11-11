@@ -39,6 +39,7 @@ public class MainActivity extends Activity {
     Boolean isSubtract;
     Boolean isMultiply;
     Boolean isDivide;
+    Boolean isInvalidButton;
 
     MyCalculator calculator;
 
@@ -81,6 +82,7 @@ public class MainActivity extends Activity {
         isSubtract = false;
         isMultiply = false;
         isDivide = false;
+        isInvalidButton = false;
     }
     public void setButtons(){
 
@@ -147,23 +149,25 @@ public class MainActivity extends Activity {
         buttonAdd.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if( isInvalidButton == false){
                 v1 = Double.parseDouble(textViewDisplay.getText().toString());
                 textViewDisplay.setText("");
-                isAdd = true;
+                isAdd = true;};
             }
         });
         buttonSubtract.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if( isInvalidButton == false){
                 v1 = Double.parseDouble(textViewDisplay.getText().toString());
                 textViewDisplay.setText("");
-                isSubtract = true;
+                isSubtract = true;};
             }
         });
         buttonMultiply.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                if(!textViewDisplay.getText().equals("")) {
+                if(!textViewDisplay.getText().equals("") && isInvalidButton == false) {
                     v1 = Double.parseDouble(textViewDisplay.getText().toString());
                     textViewDisplay.setText("");
                     isMultiply = true;
@@ -174,14 +178,16 @@ public class MainActivity extends Activity {
         buttonDivide.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if( isInvalidButton == false){
                 v1 = Double.parseDouble(textViewDisplay.getText().toString());
                 textViewDisplay.setText("");
-                isDivide = true;
+                isDivide = true;};
             }
         });
         buttonEquals.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
+                if( isInvalidButton == false){
                 v2 = Double.parseDouble(textViewDisplay.getText().toString());
                 if(isAdd==true){
                     double result = calculator.add(v1,v2);
@@ -202,13 +208,14 @@ public class MainActivity extends Activity {
                     double result = calculator.divide(v1,v2);
                     textViewDisplay.setText(""+ result);
                     isDivide = false;
-                }
+                }};
             }
         });
         buttonClear.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textViewDisplay.setText("");
+                isInvalidButton = false;
             }
         });
         buttonNegative.setOnClickListener(new View.OnClickListener() {
@@ -221,12 +228,14 @@ public class MainActivity extends Activity {
             @Override
             public void onClick(View v) {
                 textViewDisplay.setText(textViewDisplay.getText()+"%");
+                isInvalidButton = true;
             }
         });
         buttonCurrency.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 textViewDisplay.setText("$"+textViewDisplay.getText());
+                isInvalidButton = true;
             }
         });
         buttonPoint.setOnClickListener(new View.OnClickListener() {
